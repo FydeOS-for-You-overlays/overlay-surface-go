@@ -17,6 +17,7 @@ RDEPEND="
   chromeos-base/auto-expand-partition
   virtual/fydemina
   chromeos-base/flash_player
+  sys-kernel/linux-firmware-ath10k
 "
 
 DEPEND="${RDEPEND}"

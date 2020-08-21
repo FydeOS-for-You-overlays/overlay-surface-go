@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="
     chromeos-base/chromeos-accelerometer-init
-	sys-kernel/linux-firmware
+	sys-kernel/linux-firmware-intel-i915
 "
 
 DEPEND="${RDEPEND}"
@@ -29,4 +29,7 @@ src_install() {
 
   insinto /lib/firmware/ath10k
   doins -r ${FILESDIR}/firmware/QCA6174
+
+  insinto /usr/share/power_manager
+  doins -r ${FILESDIR}/board_specific
 }
