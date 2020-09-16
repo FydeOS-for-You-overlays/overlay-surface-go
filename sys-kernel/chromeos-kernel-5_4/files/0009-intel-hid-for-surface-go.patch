@@ -7,7 +7,7 @@ index ef6d4bd77b1a..5ca2e1235aa2 100644
   *  Copyright (C) 2015 Andrew Lutomirski <luto@kernel.org>
   */
 -
-+#define DEBUG 1
++//#define DEBUG 1
  #include <linux/acpi.h>
  #include <linux/dmi.h>
  #include <linux/input.h>
@@ -15,8 +15,8 @@ index ef6d4bd77b1a..5ca2e1235aa2 100644
  	{ KE_IGNORE, 0xC7, { KEY_VOLUMEDOWN } },              /* Release */
  	{ KE_KEY,    0xC8, { KEY_ROTATE_LOCK_TOGGLE } },      /* Press */
  	{ KE_IGNORE, 0xC9, { KEY_ROTATE_LOCK_TOGGLE } },      /* Release */
-+  { KE_SW,     0xCA, { .sw = { SW_DOCK, 1 } } },    /* Docked */
-+  { KE_SW,     0xCB, { .sw = { SW_DOCK, 0 } } },    /* Undocked */
++//  { KE_SW,     0xCA, { .sw = { SW_DOCK, 1 } } },    /* Docked */
++//  { KE_SW,     0xCB, { .sw = { SW_DOCK, 0 } } },    /* Undocked */
 +  { KE_SW,     0xCC, { .sw = { SW_TABLET_MODE, 1 } } }, /* Tablet */
 +  { KE_SW,     0xCD, { .sw = { SW_TABLET_MODE, 0 } } }, /* Laptop */
  	{ KE_KEY,    0xCE, { KEY_POWER } },                   /* Press */
@@ -41,7 +41,7 @@ index ef6d4bd77b1a..5ca2e1235aa2 100644
 +    tablet_mode = obj->integer.value;
 +    dev_dbg(device, "read tablet mode: %llu", tablet_mode);
 +    input_report_switch(priv->array, SW_TABLET_MODE, tablet_mode? 0:1);
-+    input_report_switch(priv->array, SW_DOCK, tablet_mode? 1:0);
++  //  input_report_switch(priv->array, SW_DOCK, tablet_mode? 1:0);
 +    ACPI_FREE(obj);
 +  }
 +}
