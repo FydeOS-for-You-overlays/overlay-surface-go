@@ -13,6 +13,7 @@ IUSE=""
 
 RDEPEND="
     chromeos-base/chromeos-accelerometer-init
+    sys-kernel/linux-firmware-qca-bluetooth
 	sys-kernel/linux-firmware-intel-i915
 "
 
