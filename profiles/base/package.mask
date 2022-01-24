@@ -1,4 +1,2 @@
 >virtual/lpe-support-0.0.1-r5
-sys-kernel/chromeos-kernel-5_4::chromiumos
-sys-kernel/chromeos-kernel-5_4::openfyde-patches
-sys-kernel/chromeos-kernel-5_4::patches
+sys-kernel/chromeos-kernel-5_4::surface
